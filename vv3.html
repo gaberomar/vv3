@@ -24,13 +24,10 @@ if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i
 }
 -->
 </script>
-
 <link href="https://www.nuevodevel.com/vdjs/v6/skins/shaka/videojs.min.css" rel="stylesheet" type="text/css" />	
+<script src="https://unpkg.com/video.js/dist/video.js"></script>
 <script src="//cdn.dashjs.org/latest/dash.all.debug.js"></script>
 <script src="https://unpkg.com/videojs-contrib-dash/dist/videojs-dash.js"></script>
-<script src="https://www.nuevodevel.com/vdjs/v6/core/7.8/nvideo.min.js"></script>
-<script src="https://www.nuevodevel.com/vdjs/js/related.js"></script>
-
     <script>
 function override(t){return t.indexOf("licensing.bitmovin.com/licensing")>-1?"data:text/plain;charset=utf-8;base64,eyJzdGF0dXMiOiJncmFudGVkIiwibWVzc2FnZSI6IlRoZXJlIHlvdSBnby4ifQ==":t.indexOf("licensing.bitmovin.com/impression")>-1?"data:text/plain;charset=utf-8;base64,eyJzdGF0dXMiOiJncmFudGVkIiwibWVzc2FnZSI6IlRoZXJlIHlvdSBnby4ifQ==":t}var open=XMLHttpRequest.prototype.open;function base64DecodeUint8Array(t){var e=window.atob(t),n=e.length,r=new Uint8Array(new ArrayBuffer(n));for(i=0;i<n;i++)r[i]=e.charCodeAt(i);return r}function ab2str(t){return String.fromCharCode.apply(null,new Uint8Array(t))}function _Base64(t){var e;if("string"==typeof t)e=t;else if(t instanceof ArrayBuffer)e=String.fromCharCode.apply(null,new Uint8Array(t));else{if(!(t instanceof Uint8Array))return"";e=String.fromCharCode.apply(null,t)}return window.btoa(e)}XMLHttpRequest.prototype.open=function(){var t=override(arguments[1]);return arguments[1]=t,open.apply(this,arguments)};const intercept=(t,e)=>{const n=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(r,i,...o){return i=i.replace(t,e),n.call(this,r,i,...o)}};intercept("http://","https://");
     </script>
