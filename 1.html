@@ -1,7 +1,20 @@
 ﻿
 <html>
 <head>
-<script>
+<meta name="referrer" content="no-referrer">
+<style>html,body{margin:0;padding:0;background:#000;;}</style>
+<script language=javascript>
+<!--
+if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+   location.replace("http://raw.githack.com/gaberomar/vv3/master/1.html");
+}
+-->
+</script>
+<link href="https://www.nuevodevel.com/vdjs/v6/skins/shaka/videojs.min.css" rel="stylesheet" type="text/css" />	
+<script src="https://unpkg.com/video.js/dist/video.js"></script>
+<script src="//cdn.dashjs.org/latest/dash.all.debug.js"></script>
+<script src="https://unpkg.com/videojs-contrib-dash/dist/videojs-dash.js"></script>
+	<script>
 function getParam ( sname )
 {
   var params = location.search.substr(location.search.indexOf("?")+1);
@@ -12,19 +25,6 @@ function getParam ( sname )
 var sv = getParam("sv");
 
 </script>
-<meta name="referrer" content="no-referrer">
-<style>html,body{margin:0;padding:0;background:#000;;}</style>
-<script language=javascript>
-<!--
-if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
-   location.replace("http://raw.githack.com/gaberomar/vv8/master/vv8.html");
-}
--->
-</script>
-<link href="https://www.nuevodevel.com/vdjs/v6/skins/shaka/videojs.min.css" rel="stylesheet" type="text/css" />	
-<script src="https://unpkg.com/video.js/dist/video.js"></script>
-<script src="//cdn.dashjs.org/latest/dash.all.debug.js"></script>
-<script src="https://unpkg.com/videojs-contrib-dash/dist/videojs-dash.js"></script>
   </head>
 <body style="margin:0;background:#000;">
 <div id="iframeDiv" style="width: 100%;"> 
