@@ -1,15 +1,7 @@
 
-
 <html>
 <head>
-
-<link href="https://www.nuevodevel.com/vdjs/v6/skins/shaka/videojs.min.css" rel="stylesheet" type="text/css" />	
-
-<script src="https://unpkg.com/video.js/dist/video.js"></script>
-	
-<script src="//cdn.dashjs.org/latest/dash.all.debug.js"></script>
- 
-<script src="https://unpkg.com/videojs-contrib-dash/dist/videojs-dash.js"></script>
+<script src="https://nexplayer.nexplayersdk.com/latest/nexplayer.js"></script><br />
 <script>
 function getParam ( sname )
 {
@@ -25,63 +17,45 @@ var sv = getParam("sv");
 <body style="margin:0;background:#000;">
 <div id="iframeDiv" style="width: 100%;"> 
 <body onload="init()">
-<video id=player class="video-js vjs-default-skin" controls> </video>
+<div id="player"></div>
 <script>
-
-  var player = videojs('player');
-	
-  player.src({ 
-  src: sv,
-  parentId: "#player",
-  autoPlay: true, 
- dvr: false,
-            muted: true,
-            controls: true,
-            share: false,
-            settings: true,
-            width: "100%",
-            height: "100%",
- adaptation: {
-            desktop: {
-                maxStartupBitrate: "2500kbps",
-                limitToPlayerSize: true,}
-            },
-            mobile: {
-                maxStartupBitrate: "1000kbps",
-                limitToPlayerSize: true, 
-  },
-  type: 'application/dash+xml',
- 
-    });
-      
-   player.on(Videojs.Events.PLAYER_STOP, playerStop);
-               function playerStop(){
-               location.reload();
-               } 
- 
-               player.play();
- 
-</script>
-<div id="videojs">
-</div>
-<style>
-	.video-js {
-		width: 100%;
-		height: 95%;
-	}
-	body {
-		text-align: center;
-		margin: 0px;
-	}
-	#videojs {
-		width: 100%;
-		height: 95%;
-	}.streaming-dimensions{
-				width: 100% !important;
-		height: 95% !important;
-	}
-</style>
+    nexplayer.Setup({
+      key: '5cc77ae58565a50908d1a378',
+      div: document.getElementById('player'),
+   autoplayAtStart: true,
+   mutedAtStart: false,
+      src: sv,
+ });
+  </script>
+<style type="text/css">
+        #player_container {
+            width: '100%';
+            margin: auto;
+            padding-top: 50.625%; /* 16:9 Aspect Ratio 56.25 * 0.9 */
+            position: relative;
+        }
+        @media (min-width: 75rem) {
+            #player_container {
+                width: '100%';
+                padding-top: 28.125%; /* 16:9 Aspect Ratio 56.25 * 0.5 */
+            }            
+        }
+        h1 {
+            text-align: center;
+        }
+        #player {
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+        }
+        #warning {
+            background-color: red;
+            text-align: center;
+            display: none;
+        }
+    </style>
 </body>
 </html>
-
 
