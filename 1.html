@@ -1,5 +1,6 @@
 
 
+
 <head><style>*{margin:0;padding:0}body{background-color:#000;color:#fff;height:100%;width:100%;overflow:hidden;position:absolute}body{text-align:center;margin:0}.streaming-dimensions{width:100%!important;height:100%!important}.video-js{width:100%;height:100%}#videojs{width:100%;height:100%}</style><link href="https://rawgit.com/xbdinfo/file/5ca03205/video-js.min.css" rel="stylesheet"></head>
 <meta name="referrer" content="no-referrer">
 
@@ -12,10 +13,75 @@
 <script>	
 	function play(link){if(link.indexOf('.php')!=-1){var xmlhttp=new XMLHttpRequest();xmlhttp.open("GET",link,!1);xmlhttp.send();src=xmlhttp.responseText}else src=link;player=videojs("restre");player.ready(function(){player.src({src:sv,type:"application/x-mpegURL"})});player.play()}
 	function reload(i){if(player.paused()&&player.error_!=null){if(i<link.length){play(link[i])}else{clearInterval(interval);document.write('<iframe id="Myiframe" src="../play.php?id=" scrolling="no" height="100%" allowfullscreen="true" width="100%" frameborder="0"></iframe>')}}}
-	function init(){var i=0;link=["",""];play(link[i]);interval=setInterval(function(){i++;reload(i)},2000)}
-</script>
+	fun
+<body onload="init()">
+
+	<div id="videojs">
+		<video id="streaming" autoplay preload="auto" height="100%" width="100%" class="video-js" controls data-setup='{"language": "vi"}'></video>
+	</div>
+	
+	
+	<script>
+
+	 var i = 0;
+	
+	function play(link) {
+			 if(link.indexOf('type=get')!=-1){var xmlhttp=new XMLHttpRequest();xmlhttp.open("GET",link,!1);xmlhttp.send();src=xmlhttp.responseText}else src=link;
+	    player = videojs("streaming");
+	    player.ready(function() {
+	        player.src({
+	            src: sv,
+	            type: "application/x-mpegURL"
+
+	        })
+	    });
+	    player.play()
+		i++;
+		
+	}
+	function reload(i) {
+	    if (player.paused() && player.error_ != null) {
+	        if (i < link.length) {
+	            play(link[i])
+	        } else {
+	            clearInterval(interval);
+	            document.write('<iframe id="Myiframe" src="vtv12.php" scrolling="no" height="100%" allowfullscreen="true" width="100%" frameborder="0"></iframe>')
+	        }
+			
+	    }
+	}
+
+	function init() {
+	   
+	    link = ["http://nex.xemtiviviet.com/next.php?id=154&token=(*)Tk3Lj(*)4LjB-zNi4x(*)TB-=&st=(*)9}B-v(*)TYv(*)j[gy(*)S[gy(*)9}o1(*)g&sv=6","http://nex.xemtiviviet.com/next.php?id=tv_2&token=(*)Tk3Lj(*)4LjB-zNi4x(*)TB-=&st=(*)9}B-v(*)TYv(*)j[gy(*)S[gy(*)9}o1(*)g&sv=6","http://nex.xemtiviviet.com/next.php?id=154&token=(*)Tk3Lj(*)4LjB-zNi4x(*)TB-=&st=(*)9}B-v(*)TYv(*)j[gy(*)S[gy(*)9}o1(*)g&sv=6"];
+	    play(link[i]);
+	    interval = setInterval(function() {
+	        
+	        reload(i);
+			
+	    }, 2000)
+	}
+	
+	</script>
+
+<style>
+	.video-js {
+		width: 100%;
+		height: 99%;
+	}
+	body {
+		text-align: center;
+		margin: 0px;
+	}
+	#videojs {
+		width: 100%;
+		height: 99%;
+	}.streaming-dimensions{
+				width: 100% !important;
+		height: 99% !important;
+	}
+</style>
 </body>
-
 <span style='position:absolute; bottom:40px!important; left: 10px!important; max-bottom: 10px!important; max-width: 170%!important; width: 22%!important; font-size: 13px; font-weight: bold;color: #ff0;'>
-<img style= 'left: 10px!important; max-height: 50px!important; max-width: 100%!important; width: 90%!important;' src='http://1.bp.blogspot.com/-6Utq5JU_l2w/YCAo8gB0x7I/AAAAAAAALZU/YJxOQHkvIywpU4znsCgYEvIsc-U8ijY1wCK4BGAYYCw/s1600/2.png'></span>
-
+<img style= 'left: 10px!important; max-height: 50px!important; max-width: 100%!important; width: 90%!important;' src='http://1.bp.blogspot.com/-6Utq5JU_l2w/YCAo8gB0x7I/AAAAAAAALZU/YJxOQHkvIywpU4znsCgYEvIsc-U8ijY1wCK4BGAYYCw/s1600/2.png'></span>ction init(){var i=0;link=["",""];play(link[i]);interval=setInterval(function(){i++;reload(i)},2000)}
+</script>
