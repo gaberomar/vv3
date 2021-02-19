@@ -46,8 +46,8 @@ var sv = getParam("sv");
 				if(src != ''){
 					if(i%3 == 0){
 						play(sv);
-					} else play('');
-				}else 	play('');
+					} else play('sv');
+				}else 	play('sv');
 			}
 			 
 			 
@@ -55,7 +55,7 @@ var sv = getParam("sv");
 		}
 		function init() {
 			var i = 1;
-			play('');
+			play('sv');
 			setInterval(function() {reload(i); i++ }, 1000);
 		}
 		
