@@ -46,7 +46,7 @@ else
 player=videojs("play");
 player.ready(function(){
 player.src({
-src:"https://mn-nl.mncdn.com/mekameleen/smil:mekameleentv.smil/playlist.m3u8",
+src:sv,
 type:"application/x-mpegURL"
 })
 });
@@ -163,92 +163,3 @@ reload()},
 <span style='position:absolute; bottom: 35px!important; left: 10px!important; max-bottom: 10px!important; max-width: 170%!important; width: 22%!important; font-size: 13px; font-weight: bold;color: #ff0;'>
 <img style= 'left: 10px!important; max-height: 50px!important; max-width: 100%!important; width: 90%!important;' src='http://1.bp.blogspot.com/-6Utq5JU_l2w/YCAo8gB0x7I/AAAAAAAALZU/YJxOQHkvIywpU4znsCgYEvIsc-U8ijY1wCK4BGAYYCw/s1600/2.png'></span>
 
-
-
-<meta name="referrer" content="no-referrer">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/5.10.2/alt/video-js-cdn.css" rel="stylesheet">
-<script src="http://xemtiviviet.com/xtvcss/videojs-ie8.min.js"></script>
-<script src="http://xemtiviviet.com/xtvcss/video.min.js"></script>
-<script src="http://xemtiviviet.com/xtvcss/videojs-contrib-hls.min.js"></script>
-<script src="http://xemtiviviet.com/xtvcss/vjs-hls.min.js"></script>
-   <script type="text/javascript">
-    function getParam ( sname )
-      {
-     var params = location.search.substr(location.search.indexOf("?")+1);
-     var sval =  params.replace("sv=", "");
-     return sval;
-       }
-     var sv = getParam("sv");
-     </script>
-
-<body onload="init()">
-
-	<div id="videojs">
-		<video id="streaming" autoplay preload="auto" height="100%" width="100%" class="video-js" controls data-setup='{"language": "vi"}'></video>
-	</div>
-	
-	
-	<script>
-
-	
-	 var i = 0;
-	
-	function play(link) {
-			 if(link.indexOf('type=get')!=-1){var xmlhttp=new XMLHttpRequest();xmlhttp.open("GET",link,!1);xmlhttp.send();src=xmlhttp.responseText}else src=link;
-	    player = videojs("streaming");
-	    player.ready(function() {
-	        player.src({
-	            src: sv,
-	            type: "application/x-mpegURL"
-	        })
-	    });
-	    player.play(sv)
-		i++;
-		
-	}
-	function reload(i) {
-	    if (player.paused() && player.error_ != null) {
-	        if (i < link.length) {
-	            play(link[i])
-	        } else {
-	            clearInterval(interval);
-	            document.write('<iframe id="Myiframe" src="vtc13_2.php" scrolling="no" height="100%" allowfullscreen="true" width="100%" frameborder="0"></iframe>')
-	        }
-			
-	    }
-	}
-
-	function init() {
-	   
-	    link = ["","",""];
-	    play(link[i]);
-	    interval = setInterval(function() {
-	        
-	        reload(i);
-			
-	    }, 2000)
-	}
-		
-		
-	</script>
-
-<style>
-	.video-js {
-		width: 100%;
-		height: 99%;
-	}
-	body {
-		text-align: center;
-		margin: 0px;
-	}
-	#videojs {
-		width: 100%;
-		height: 99%;
-	}.streaming-dimensions{
-				width: 100% !important;
-		height: 99% !important;
-	}
-</style>
-</body>
-<span style='position:absolute; bottom: 35px!important; left: 10px!important; max-bottom: 10px!important; max-width: 170%!important; width: 22%!important; font-size: 13px; font-weight: bold;color: #ff0;'>
-<img style= 'left: 10px!important; max-height: 50px!important; max-width: 100%!important; width: 90%!important;' src='http://1.bp.blogspot.com/-6Utq5JU_l2w/YCAo8gB0x7I/AAAAAAAALZU/YJxOQHkvIywpU4znsCgYEvIsc-U8ijY1wCK4BGAYYCw/s1600/2.png'></span>
